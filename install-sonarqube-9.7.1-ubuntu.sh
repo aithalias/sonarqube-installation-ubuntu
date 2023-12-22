@@ -14,12 +14,12 @@ sudo apt-get install -y fontconfig openjdk-17-jre > /dev/null 2>&1
 echo "            -> Done"
 
 # Downloading SonarQube 9.7.1 version to OPT folder
-echo "*****Downloading SonarQube 9.7.1 version"
+echo "*****Downloading SonarQube 9.9.3 version"
 cd /opt 
 sudo rm -rf sonarqube*
-sudo wget -q https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.7.1.62043.zip
-sudo unzip -q sonarqube-9.7.1.62043.zip -d /opt/sonarqube 1>/dev/null
-sudo rm -rf sonarqube-9.7.1.62043.zip
+sudo wget -q https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.9.3.79811.zip
+sudo unzip -q sonarqube-9.9.3.79811.zip -d /opt/sonarqube 1>/dev/null
+sudo rm -rf sonarqube-9.9.3.79811.zip
 echo "            -> Done"
 
 # Changing Ownership as Sonarqube Does not work with Root User
@@ -30,7 +30,7 @@ echo "            -> Done"
 # Starting SonarQube Service
 echo "*****Starting SonarQube Server"
 cd /opt
-sudo su -m ubuntu -c "./sonarqube/sonarqube-9.7.1.62043/bin/linux-x86-64/sonar.sh start 1>/dev/null"
+sudo su -m ubuntu -c "./sonarqube/sonarqube-9.9.3.79811/bin/linux-x86-64/sonar.sh start 1>/dev/null"
 
 
 # Check if SonarQube is working
