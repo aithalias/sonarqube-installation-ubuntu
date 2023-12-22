@@ -10,7 +10,7 @@ echo "################################################################"
 # Installing necessary packages
 echo "\n\n*****Installing necessary packages"
 sudo apt-get update -y > /dev/null 2>&1
-sudo apt-get install -y default-jre unzip > /dev/null 2>&1
+sudo apt-get install -y fontconfig openjdk-17-jre > /dev/null 2>&1
 echo "            -> Done"
 
 # Downloading SonarQube 9.7.1 version to OPT folder
